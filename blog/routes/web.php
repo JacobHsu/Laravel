@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('member/{id}', 'MemberController@info')
+->where('id', '[0-9]+');
+//Route::get('member/info', ['uses'=>'MemberController@info']);
+
+// Route::get('member/info', [
+// 	'uses'=>'MemberController@info',
+// 	'as'=>'memberInfo'
+// ]);

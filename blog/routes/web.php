@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',['name'=>'Jacob Hsu']);
 });
 
 Route::get('member/{id}', 'MemberController@info')

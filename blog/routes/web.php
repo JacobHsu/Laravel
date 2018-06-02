@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::get('member/{id}', 'MemberController@info')
 ->where('id', '[0-9]+');
+
+Route::any('request', 'RequestController@store');
+
 //Route::get('member/info', ['uses'=>'MemberController@info']);
 
 // Route::get('member/info', [

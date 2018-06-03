@@ -26,8 +26,18 @@ class SessController extends Controller
         var_dump($resArr);
 
         Session::forget('key4');
-        
+
         $res = Session::all();
         dd($res);
+    }
+
+    public function activity0() 
+    {
+        return "coming soon...";
+    }
+
+    public function activity() 
+    {
+        return "ongoing";
     }
 }

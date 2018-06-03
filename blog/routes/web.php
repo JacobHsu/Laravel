@@ -20,6 +20,11 @@ Route::get('member/{id}', 'MemberController@info')
 
 Route::any('request', 'RequestController@store');
 
+
+Route::group(['middleware'=>['web']], function(){
+	Route::any('sess1', 'SessController@session1');
+	Route::any('sess2', 'SessController@session2');
+});
 //Route::get('member/info', ['uses'=>'MemberController@info']);
 
 // Route::get('member/info', [

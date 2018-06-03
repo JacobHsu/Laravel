@@ -33,6 +33,10 @@ Route::group(['middleware'=>['activity']], function(){
 	Route::any('activity', 'SessController@activity');
 });
 
+
+Route::get('form/index', 'FormController@index');
+
+
 //Route::get('member/info', ['uses'=>'MemberController@info']);
 
 // Route::get('member/info', [

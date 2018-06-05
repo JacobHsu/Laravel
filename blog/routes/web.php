@@ -43,3 +43,7 @@ Route::get('form/index', 'FormController@index');
 // 	'uses'=>'MemberController@info',
 // 	'as'=>'memberInfo'
 // ]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

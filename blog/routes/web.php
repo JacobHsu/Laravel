@@ -11,6 +11,16 @@
 |
 */
 
+
+// 'prefix' => 'admin' -> http://blog.test/admin/login
+// 'namespace' =>'Admin' -> Controllers\Admin\AuthController.php
+Route::group(['prefix' => 'admin', 'namespace' =>'Admin'], function () {
+    Route::get('login', [ 'as' => 'login', 'uses' => 'AuthController@login']);
+    Route::post('login', 'AuthController@do_login');
+});
+Route::get('logout', [ 'as' => 'logout', 'uses' => 'AuthController@logout']);
+
+
 Route::get('/', function () {
     return view('welcome',['name'=>'Jacob Hsu']);
 });

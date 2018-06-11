@@ -28,4 +28,15 @@ blog>`php artisan serve`
 
 [Laravel 快速入門](https://laravel.tw/docs/4.2/quick)  
 
-#PHP
+## auth
+
+`php artisan`  
+
+內建認證控制器
+
+`php artisan make:auth`  生成模板和路由  
+不使用刪除 `blog\app\Http\Controllers\Auth`  
+
+
+[手動認證使用者](https://laravel.tw/docs/5.2/authentication)  
+`php artisan make:controller Admin\AuthController`  
